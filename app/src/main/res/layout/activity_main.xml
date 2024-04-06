@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/dollarEditText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="84dp"
+        android:hint="Enter Dollars"
+        android:layout_marginTop="40dp"
+        android:inputType="numberDecimal"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/dollarToRupeeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/dollarToRupeeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dollarEditText"
+        android:text="Convert to Rupees"
+        app:layout_constraintBottom_toTopOf="@+id/rupeeEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dollarEditText" />
+
+    <EditText
+        android:id="@+id/rupeeEditText"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/dollarToRupeeButton"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="93dp"
+        android:hint="Enter Rupees"
+        android:inputType="numberDecimal"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/rupeeToDollarButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dollarToRupeeButton" />
+
+    <Button
+        android:id="@+id/rupeeToDollarButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rupeeEditText"
+        android:layout_marginTop="300dp"
+        android:layout_marginBottom="72dp"
+        android:text="Convert to Dollars"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/dollor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rupeeToDollarButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
